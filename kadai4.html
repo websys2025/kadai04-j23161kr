@@ -35,8 +35,8 @@
                 static showItemList(list) {
                     console.log("商品は以下の" + Item.number + "種類です。");
 
-                    // 配列の内容を項目毎に出力
-                    // 課題4-1. ここにコードを書く
+                    for (let i = 0; i < list.length; i++) {
+                    const item = list[i];
                     console.log(""); // 空行の出力
                 }
                 
@@ -61,7 +61,9 @@
             const item_list = new Array(items.length);
             const btn = new Array(items.length);
 
-            // 課題4-1. ここにコード書く
+            for (let i = 0; i < items.length; i++) {
+            const { name, price, stock } = items[i];
+            item_list[i] = new Item(name, price, stock);
             // 商品オブジェクトの生成
 
             // 課題4-2. ここにコードを書く
